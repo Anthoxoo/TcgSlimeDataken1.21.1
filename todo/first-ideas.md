@@ -1,9 +1,5 @@
 # Item binder avec 8 slots
 
-# Créer un objet carte qui va recevoir des attributs grace a une méthode give_effects
-
-# Créer un enum tier qui aura comme champs "Common (a voir avec cha Uncommon) Rare Epic Legendary"
-
 # fonction random_tier qui va utiliser un randomizer entre 0 et 1 et en fonction du nb tiré
 # choisir le tier (a discuter des valeurs) et qui va renvoyer un enum tier
 
@@ -22,3 +18,7 @@
 #### Mettre bonus si jamais x cartes dans le binder sont de la "meme famille"
 
 ##### Mettre les sounds
+
+# FAITS
+
+~~Créer un objet carte qui va recevoir des attributs grace a une méthode give_effects~~
