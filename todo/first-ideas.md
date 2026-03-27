@@ -17,4 +17,8 @@
 
 #### Faire assets
 
+#### Faire ouverture booster
+
 #### Mettre bonus si jamais x cartes dans le binder sont de la "meme famille"
+
+##### Mettre les sounds
