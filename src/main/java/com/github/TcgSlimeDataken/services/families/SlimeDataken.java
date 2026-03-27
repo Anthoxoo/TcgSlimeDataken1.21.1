@@ -1,6 +1,6 @@
 package com.github.TcgSlimeDataken.services.families;
 
-public enum FamilySlimeDataken {
+public enum SlimeDataken {
     TEMPEST,
     DEMON_KING,
     DRAKES,
