@@ -1,4 +1,4 @@
-package com.github.TcgSlimeDataken.item;
+package com.example.examplemod;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredHolder;
