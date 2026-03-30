@@ -5,8 +5,8 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.Item;
 
 public class CardItem extends Item {
-    private RarityTier rarity = null; // None for the moment, will be given when doing the GiveCardRarity method.
-    private MobEffect effect = null; // Same
+    private final RarityTier rarity; // None for the moment, will be given when doing the GiveCardRarity method.
+    private final MobEffect effect; // Same
 
 
     // Constructor
@@ -22,14 +22,6 @@ public class CardItem extends Item {
     }
     public MobEffect getCardEffect() {
         return this.effect;
-    }
-
-    // Setters
-    public void setCardTier(RarityTier newRarity) {
-        this.rarity = newRarity;
-    }
-    public void setCardEffect(MobEffect newEffect) {
-        this.effect = newEffect;
     }
 
 }
