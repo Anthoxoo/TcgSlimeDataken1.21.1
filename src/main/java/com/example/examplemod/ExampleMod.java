@@ -54,7 +54,25 @@ public class ExampleMod {
     // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
     public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item", new Item.Properties().food(new FoodProperties.Builder()
             .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
-//    public static final DeferredItem<Item> CARD_ITEM = ITEMS.registerSimpleItem("card", new Item.Properties().stacksTo(64));
+
+    /// // le Backpack
+    public static final DeferredHolder<Item, Item> BACKPACK = ITEMS.register("backpack", () ->
+            new BackpackItem(new Item.Properties()
+                    .stacksTo(1) // Un sac ne s'empile pas !
+                    // La MAGIE est ici : On lui attache un inventaire vide (Container) par défaut !
+                    .component(net.minecraft.core.component.DataComponents.CONTAINER, net.minecraft.world.item.component.ItemContainerContents.EMPTY)
+            )
+    );
+
+    ///  le register backapck je pense c'est la
+    // On crée le registre pour les Menus (Interfaces)
+    public static final net.neoforged.neoforge.registries.DeferredRegister<net.minecraft.world.inventory.MenuType<?>> MENUS =
+            net.neoforged.neoforge.registries.DeferredRegister.create(net.minecraft.core.registries.Registries.MENU, MODID);
+
+    // On déclare notre BackpackMenu
+    public static final java.util.function.Supplier<net.minecraft.world.inventory.MenuType<BackpackMenu>> BACKPACK_MENU =
+            MENUS.register("backpack_menu", () -> new net.minecraft.world.inventory.MenuType<>(BackpackMenu::new, net.minecraft.world.flag.FeatureFlags.DEFAULT_FLAGS));
+
 
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
@@ -64,6 +82,8 @@ public class ExampleMod {
             .displayItems((parameters, output) -> {
                 output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
 //                output.accept(CARD_ITEM.get()); // ---> AJOUTE CETTE LIGNE ICI POUR AFFICHER TA CARTE
+                // le Backpack item dans l'inventaire creatif
+                output.accept(BACKPACK.get());
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
@@ -78,10 +98,15 @@ public class ExampleMod {
         ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
+        // ca recup le fonctionnement de l'invenaitre le nombre de case d'inventaire etc sont cerveaux normalement
+        MENUS.register(modEventBus);
+        // On relie l'Arbitre (Menu) à son Visuel (Screen)
+        // lorsque je clique sur mon sac alors ca open l'interface graphique
+        modEventBus.addListener((net.neoforged.neoforge.client.event.RegisterMenuScreensEvent event) -> {
+            event.register(BACKPACK_MENU.get(), BackpackScreen::new);
+        });
 
         // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
         // Register the item to a creative tab
