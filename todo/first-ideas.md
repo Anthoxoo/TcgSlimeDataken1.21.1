@@ -1,4 +1,4 @@
-# Item binder avec 8 slots
+# Item binder avec 6 slots, faire en sorte que : on ne puisse mettre que des "CardItem" dedans, mettre 6 slots et augmenter la taille des cases.
 
 ## Voir implémentation API Curios pour stocker binder.
 
@@ -12,6 +12,10 @@
 #### Mettre bonus si jamais x cartes dans le binder sont de la "meme famille"
 
 ##### Mettre les sounds
+
+##### Mettre dans config la possibilité pour le joueur de modifier les probas de loot des cartes donc les mettre en Static final dans le config et les reprendre directement dans le Service/CardStats
+
+
 
 # FAITS
 
