@@ -22,3 +22,12 @@
 # FAITS
 
 ~~Créer un objet carte qui va recevoir des attributs grace a une méthode give_effects~~
+
+
+
+BINDER : 
+a regler :  - autoriser seulement les "CardItem"
+            - changer l'asset
+            - changer nb case
+            - changer taille case
+            - pouvoir équiper avec curios
