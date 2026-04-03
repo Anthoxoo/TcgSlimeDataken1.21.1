@@ -1,5 +1,5 @@
-package com.github.TcgSlimeDataken.services;
-import com.github.TcgSlimeDataken.item.CardItem;
+package com.github.TcgAnime.services;
+import com.github.TcgAnime.item.CardItem;
 import net.minecraft.world.effect.MobEffect;
 
 import java.util.HashMap;
@@ -20,7 +20,7 @@ public class CardStats {
 
     /* Param : card object
      * changes the tier of the card to the one that has been rolled. */
-    public void RollRandomRarity(CardItem card) {
+    public RarityTier RollRandomRarity(CardItem card) {
         final double COMMON = 0.5;
         final double RARE = 0.75;
         final double EPIC = 0.93;
@@ -30,18 +30,18 @@ public class CardStats {
         double randomNumber = rand.nextDouble();
 
         if (randomNumber > EPIC) {
-            card.setCardTier(RarityTier.LEGENDARY);
+            return RarityTier.LEGENDARY;
         } else if (randomNumber >= RARE) {
-            card.setCardTier(RarityTier.EPIC);
+            return RarityTier.EPIC;
         } else if (randomNumber >= COMMON) {
-            card.setCardTier(RarityTier.RARE);
+            return RarityTier.RARE;
         } else {
-            card.setCardTier(RarityTier.COMMON);
+            return RarityTier.COMMON;
         }
     }
     /* Param : card object, HashMap of the effects that have the tier : the effect
     * changes the effect of the card to the one that is associated with the tier in the effectMap hashmap. */
-    public void EffectPerTier(CardItem card, HashMap<RarityTier, MobEffect> effectMap) {
-        card.setCardEffect(effectMap.get(card.getCardTier()));
+    public MobEffect EffectPerTier(CardItem card, HashMap<RarityTier, MobEffect> effectMap) {
+        return effectMap.get(card.getCardTier());
     }
 }
