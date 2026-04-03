@@ -1,4 +1,4 @@
-package com.github.TcgSlimeDataken.services;
+package com.github.TcgAnime.services;
 
 public enum Universes {
     SLIME_DATAKEN,

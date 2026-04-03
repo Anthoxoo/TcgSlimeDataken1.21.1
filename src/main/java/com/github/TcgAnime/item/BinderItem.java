@@ -1,4 +1,4 @@
-package com.github.TcgSlimeDataken.item;
+package com.github.TcgAnime.item;
 
 public class BinderItem {
 }

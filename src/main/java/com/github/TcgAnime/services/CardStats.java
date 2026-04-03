@@ -1,5 +1,5 @@
-package com.github.TcgSlimeDataken.services;
-import com.github.TcgSlimeDataken.item.CardItem;
+package com.github.TcgAnime.services;
+import com.github.TcgAnime.item.CardItem;
 import net.minecraft.world.effect.MobEffect;
 
 import java.util.HashMap;
