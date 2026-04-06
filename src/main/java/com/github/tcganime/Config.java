@@ -1,4 +1,4 @@
-package com.github.TcgAnime;
+package com.github.tcganime;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
 
