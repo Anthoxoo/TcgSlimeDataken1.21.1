@@ -1,5 +1,6 @@
 package com.github.tcganime;
 
+import com.github.tcganime.item.BinderItem;
 import com.github.tcganime.item.CardItem;
 import com.github.tcganime.services.CardStats;
 import com.mojang.logging.LogUtils;
@@ -37,6 +38,9 @@ public class TcgAnime {
 
     public static final DeferredItem<CardItem> LIMULE_SLIME = ITEMS.register("limule_slime",
             () -> new CardItem(new Item.Properties(), CardStats.RarityTier.COMMON, "001LimuleSlime"));
+
+    public static final DeferredItem<BinderItem> CLASSIC_BINDER = ITEMS.register("classic_binder",
+            () -> new BinderItem(new Item.Properties(), "binder"));
 
 
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "tcganime" namespace
@@ -80,6 +84,8 @@ public class TcgAnime {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) { // ajout dans la catégorie ingrédient
             // event.accept(Item); nom de l'item
             event.accept(LIMULE_SLIME);
+            event.accept(CLASSIC_BINDER);
+
         }
     }
 
