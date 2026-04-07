@@ -5,6 +5,8 @@ import com.github.tcganime.item.CardItem;
 import com.github.tcganime.services.CardStats;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -37,7 +39,7 @@ public class TcgAnime {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
     public static final DeferredItem<CardItem> LIMULE_SLIME = ITEMS.register("limule_slime",
-            () -> new CardItem(new Item.Properties(), CardStats.RarityTier.COMMON, "001LimuleSlime"));
+            () -> new CardItem(new Item.Properties(), CardStats.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,"001LimuleSlime"));
 
     public static final DeferredItem<BinderItem> CLASSIC_BINDER = ITEMS.register("classic_binder",
             () -> new BinderItem(new Item.Properties(), "binder"));
