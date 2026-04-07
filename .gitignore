@@ -38,3 +38,6 @@ run/
 **/src/generated/**/.cache/
 repo/
 !**/src/**/repo/
+
+# File just to know what to do this session.
+temp.txt
