@@ -1,4 +1,4 @@
-package com.github.TcgAnime.services.families;
+package com.github.tcganime.services.families;
 
 public enum SlimeDataken {
     TEMPEST,

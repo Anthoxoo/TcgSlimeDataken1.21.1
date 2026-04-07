@@ -1,19 +1,21 @@
-package com.github.TcgAnime;
+package com.github.tcganime;
 
+import com.github.tcganime.item.BinderItem;
+import com.github.tcganime.item.CardItem;
+import com.github.tcganime.services.CardStats;
 import com.mojang.logging.LogUtils;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.common.ModConfigSpec;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -31,7 +33,18 @@ public class TcgAnime {
     // Create a Deferred Register to hold Blocks which will all be registered under the "tcganime" namespace but we don't have blocks for the moment
     // public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
     // Create a Deferred Register to hold Items which will all be registered under the "tcganime" namespace
+
+
+    //Registering items
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
+
+    public static final DeferredItem<CardItem> LIMULE_SLIME = ITEMS.register("limule_slime",
+            () -> new CardItem(new Item.Properties(), CardStats.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,"001LimuleSlime"));
+
+    public static final DeferredItem<BinderItem> CLASSIC_BINDER = ITEMS.register("classic_binder",
+            () -> new BinderItem(new Item.Properties(), "binder"));
+
+
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "tcganime" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
@@ -72,6 +85,9 @@ public class TcgAnime {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) { // ajout dans la catégorie ingrédient
             // event.accept(Item); nom de l'item
+            event.accept(LIMULE_SLIME);
+            event.accept(CLASSIC_BINDER);
+
         }
     }
 
