@@ -1,13 +1,14 @@
 package com.github.tcganime.services;
+import com.github.tcganime.TcgAnime;
 import com.github.tcganime.item.CardItem;
 import net.minecraft.world.effect.MobEffect;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 
 public class CardStats {
-
-
     public enum RarityTier {
         /* This enum will allow to determine the rarity of the card we will be opening in order to give the right effect*/
         COMMON,
@@ -16,11 +17,23 @@ public class CardStats {
         LEGENDARY
     }
 
-    private final HashMap<RarityTier, MobEffect> testEffect = new HashMap<>();
+    // we put every card we registered in this list so we can later pull a random one.
+    public static final List<DeferredItem<CardItem>> COMMON_CARDS = List.of(
+            TcgAnime.LIMULE_SLIME
+    );
+
+    public static final List<DeferredItem<CardItem>> RARE_CARDS = List.of(
+    );
+
+    public static final List<DeferredItem<CardItem>> EPIC_CARDS = List.of(
+    );
+
+    public static final List<DeferredItem<CardItem>> LEGENDARY_CARDS = List.of(
+    );
 
     /* Param : card object
      * changes the tier of the card to the one that has been rolled. */
-    public RarityTier RollRandomRarity(CardItem card) {
+    public static RarityTier rollRandomRarity() {
         final double COMMON = 0.5;
         final double RARE = 0.75;
         final double EPIC = 0.93;
@@ -39,9 +52,28 @@ public class CardStats {
             return RarityTier.COMMON;
         }
     }
-    /* Param : card object, HashMap of the effects that have the tier : the effect
-    * changes the effect of the card to the one that is associated with the tier in the effectMap hashmap. */
-    public MobEffect EffectPerTier(CardItem card, HashMap<RarityTier, MobEffect> effectMap) {
-        return effectMap.get(card.getCardTier());
+
+    public static DeferredItem<CardItem> pullRandomCard() {
+        RarityTier tier = rollRandomRarity();
+
+        List<DeferredItem<CardItem>> poolToUse;
+        switch (tier) {
+            case LEGENDARY -> poolToUse = LEGENDARY_CARDS;
+            case EPIC -> poolToUse = EPIC_CARDS;
+            case RARE -> poolToUse = RARE_CARDS;
+            default -> poolToUse = COMMON_CARDS;
+        }
+
+
+        Random rand = new Random();
+        try { // in case the list of the tier given is empty
+            // taking a random index from the card in the poolToUse list.
+            int randomIndex = rand.nextInt(poolToUse.size());
+            return poolToUse.get(randomIndex);
+        }
+        catch (IllegalArgumentException e) {
+            TcgAnime.LOGGER.error("ERROR, the stack of card possible from the {} is empty", tier);
+            return COMMON_CARDS.getFirst(); // gives the first card of the common stack as preventive
+        }
     }
 }
