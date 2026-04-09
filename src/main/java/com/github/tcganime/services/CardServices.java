@@ -1,14 +1,12 @@
 package com.github.tcganime.services;
 import com.github.tcganime.TcgAnime;
 import com.github.tcganime.item.CardItem;
-import net.minecraft.world.effect.MobEffect;
 import net.neoforged.neoforge.registries.DeferredItem;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
-public class CardStats {
+public class CardServices {
     public enum RarityTier {
         /* This enum will allow to determine the rarity of the card we will be opening in order to give the right effect*/
         COMMON,

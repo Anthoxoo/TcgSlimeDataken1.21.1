@@ -1,6 +1,6 @@
 package com.github.tcganime.item;
 
-import com.github.tcganime.services.CardStats.RarityTier;
+import com.github.tcganime.services.CardServices.RarityTier;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.Item;

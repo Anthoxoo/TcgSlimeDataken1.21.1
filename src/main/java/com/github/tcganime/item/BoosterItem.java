@@ -6,7 +6,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import com.github.tcganime.services.CardStats;
+import com.github.tcganime.services.CardServices;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 public class BoosterItem extends Item {
@@ -26,9 +26,9 @@ public class BoosterItem extends Item {
         ItemStack boosterStack = player.getItemInHand(hand);
 
         if (!level.isClientSide()) {
-            ItemStack card1 = CardStats.pullRandomCard().toStack();
-            ItemStack card2 = CardStats.pullRandomCard().toStack();
-            ItemStack card3 = CardStats.pullRandomCard().toStack();
+            ItemStack card1 = CardServices.pullRandomCard().toStack();
+            ItemStack card2 = CardServices.pullRandomCard().toStack();
+            ItemStack card3 = CardServices.pullRandomCard().toStack();
 
             ItemHandlerHelper.giveItemToPlayer(player, card1);
             ItemHandlerHelper.giveItemToPlayer(player, card2);
