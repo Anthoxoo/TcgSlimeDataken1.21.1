@@ -1,6 +1,7 @@
 package com.github.tcganime;
 
 import com.github.tcganime.item.BinderItem;
+import com.github.tcganime.item.BoosterItem;
 import com.github.tcganime.item.CardItem;
 import com.github.tcganime.services.CardStats;
 import com.mojang.logging.LogUtils;
@@ -38,12 +39,17 @@ public class TcgAnime {
     //Registering items
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
+    // Cards
     public static final DeferredItem<CardItem> LIMULE_SLIME = ITEMS.register("limule_slime",
             () -> new CardItem(new Item.Properties(), CardStats.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,"001LimuleSlime"));
 
+    // Binders
     public static final DeferredItem<BinderItem> CLASSIC_BINDER = ITEMS.register("classic_binder",
             () -> new BinderItem(new Item.Properties(), "binder"));
 
+    // Booster
+    public static final DeferredItem<BoosterItem> CLASSIC_BOOSTER = ITEMS.register("classic_booster",
+            () -> new BoosterItem(new Item.Properties(), "booster"));
 
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "tcganime" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
@@ -87,7 +93,7 @@ public class TcgAnime {
             // event.accept(Item); nom de l'item
             event.accept(LIMULE_SLIME);
             event.accept(CLASSIC_BINDER);
-
+            event.accept(CLASSIC_BOOSTER);
         }
     }
 
