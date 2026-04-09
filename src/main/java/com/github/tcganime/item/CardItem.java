@@ -31,4 +31,7 @@ public class CardItem extends Item {
         return this.effectAmplifier;
     }
 
+    public String getName() {
+        return name;
+    }
 }
