@@ -10,15 +10,8 @@ import com.github.tcganime.services.CardServices;
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 public class BoosterItem extends Item {
-    private final String name;
-
-    public BoosterItem(Properties properties, String name) {
+    public BoosterItem(Properties properties) {
         super(properties);
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.github.tcganime.services;
 
-public enum Universes {
+public enum Universe {
     SLIME_DATAKEN,
     DRAGON_BALL,
     ONE_PIECE,

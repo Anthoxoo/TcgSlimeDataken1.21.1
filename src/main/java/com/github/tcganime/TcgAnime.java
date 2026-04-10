@@ -22,6 +22,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
+import com.github.tcganime.services.Universe;
 
 @Mod(TcgAnime.MODID)
 public class TcgAnime {
@@ -40,15 +41,84 @@ public class TcgAnime {
 
     // Cards
     public static final DeferredItem<CardItem> LIMULE_SLIME = ITEMS.register("limule_slime",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,"001LimuleSlime"));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,1, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> RIMURU = ITEMS.register("rimuru",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,2, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> RIMURU_ROI = ITEMS.register("rimuru_roi",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1,3, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> RENGA = ITEMS.register("renga",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,4, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> BENIMARU = ITEMS.register("benimaru",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1,5, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> SHION = ITEMS.register("shion",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,6, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> SHUNA = ITEMS.register("shuna",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,7, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> VELDRA = ITEMS.register("veldra",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1,8, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> DIABLO = ITEMS.register("diablo",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1,9, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> GOBUTA = ITEMS.register("gobuta",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,10, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> GABIRU = ITEMS.register("gabiru",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,11, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> SHIZU = ITEMS.register("shizu",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1,12, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> SOUEI = ITEMS.register("souei",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,13, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> HAKUROU = ITEMS.register("hakurou",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,14, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> KUROBE = ITEMS.register("kurobe",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,15, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> MILIM = ITEMS.register("milim",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1,16, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> RIGURUD = ITEMS.register("rigurud",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,17, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> GERUDO = ITEMS.register("gerudo",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,18, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> ROUGE = ITEMS.register("rouge",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1,19, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> CLAYMAN = ITEMS.register("clayman",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,20, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> VALENTINA = ITEMS.register("valentina",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1,21, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> LAMIRIS = ITEMS.register("lamiris",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1,22, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> LEON = ITEMS.register("leon",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1,23, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> KARION = ITEMS.register("karion",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,24, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> FREY = ITEMS.register("frey",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,25, Universe.SLIME_DATAKEN));
+    public static final DeferredItem<CardItem> DINO = ITEMS.register("dino",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,26, Universe.SLIME_DATAKEN));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Binders
-    public static final DeferredItem<BinderItem> CLASSIC_BINDER = ITEMS.register("classic_binder",
-            () -> new BinderItem(new Item.Properties(), "binder"));
+    public static final DeferredItem<BinderItem> CLASSIC_BINDER = ITEMS.register("perona_binder",
+            () -> new BinderItem(new Item.Properties()));
 
     // Booster
     public static final DeferredItem<BoosterItem> CLASSIC_BOOSTER = ITEMS.register("classic_booster",
-            () -> new BoosterItem(new Item.Properties(), "booster"));
+            () -> new BoosterItem(new Item.Properties()));
 
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "tcganime" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
@@ -90,9 +160,9 @@ public class TcgAnime {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) { // ajout dans la catégorie ingrédient
             // event.accept(Item); nom de l'item
-            event.accept(LIMULE_SLIME);
-            event.accept(CLASSIC_BINDER);
-            event.accept(CLASSIC_BOOSTER);
+            for (var itemEntry : ITEMS.getEntries()) {
+                event.accept(itemEntry.get());
+            }
         }
     }
 
