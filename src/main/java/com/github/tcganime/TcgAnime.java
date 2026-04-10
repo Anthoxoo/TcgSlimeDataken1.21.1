@@ -40,60 +40,93 @@ public class TcgAnime {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MODID);
 
     // Cards
+    // Slime dataken
     public static final DeferredItem<CardItem> LIMULE_SLIME = ITEMS.register("limule_slime",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,1, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> RIMURU = ITEMS.register("rimuru",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,2, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> RIMURU_ROI = ITEMS.register("rimuru_roi",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1,3, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> RENGA = ITEMS.register("renga",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,4, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> BENIMARU = ITEMS.register("benimaru",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1,5, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> SHION = ITEMS.register("shion",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,6, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> SHUNA = ITEMS.register("shuna",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,7, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> VELDRA = ITEMS.register("veldra",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1,8, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> DIABLO = ITEMS.register("diablo",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1,9, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> GOBUTA = ITEMS.register("gobuta",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,10, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> GABIRU = ITEMS.register("gabiru",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,11, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> SHIZU = ITEMS.register("shizu",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1,12, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> SOUEI = ITEMS.register("souei",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,13, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> HAKUROU = ITEMS.register("hakurou",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,14, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> KUROBE = ITEMS.register("kurobe",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,15, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> MILIM = ITEMS.register("milim",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1,16, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> RIGURUD = ITEMS.register("rigurud",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,17, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> GERUDO = ITEMS.register("gerudo",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,18, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> ROUGE = ITEMS.register("rouge",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1,19, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> CLAYMAN = ITEMS.register("clayman",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1,20, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> VALENTINA = ITEMS.register("valentina",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1,21, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> LAMIRIS = ITEMS.register("lamiris",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1,22, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> LEON = ITEMS.register("leon",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1,23, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> KARION = ITEMS.register("karion",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,24, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> FREY = ITEMS.register("frey",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,25, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> DINO = ITEMS.register("dino",
-            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1,26, Universe.SLIME_DATAKEN));
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
 
-
+    // One piece
+    public static final DeferredItem<CardItem> LUFFY = ITEMS.register("luffy",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> ZORO = ITEMS.register("zoro",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> SANJI = ITEMS.register("sanji",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> FRANKY = ITEMS.register("franky",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> BROOK = ITEMS.register("brook",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> NAMI = ITEMS.register("nami",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> ROBIN = ITEMS.register("robin",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> JIMBE = ITEMS.register("jimbe",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> CHOPPER = ITEMS.register("chopper",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> LUFFY_GEAR_5 = ITEMS.register("luffy_gear_5",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> SHANKS = ITEMS.register("shanks",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> BARBE_BLANCHE = ITEMS.register("barbe_blanche",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> BAGGY = ITEMS.register("baggy",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.RARE, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> BARBE_NOIRE = ITEMS.register("barbe_noire",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.LEGENDARY, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> KAIDO = ITEMS.register("kaido",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
+    public static final DeferredItem<CardItem> BIG_MOM = ITEMS.register("big_mom",
+            () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
 
 
 

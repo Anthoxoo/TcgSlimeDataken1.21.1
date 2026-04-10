@@ -24,7 +24,10 @@ public class CardServices {
             TcgAnime.KUROBE,
             TcgAnime.RIGURUD,
             TcgAnime.GERUDO,
-            TcgAnime.CLAYMAN
+            TcgAnime.CLAYMAN,
+            TcgAnime.FRANKY,
+            TcgAnime.BROOK,
+            TcgAnime.JIMBE
     );
 
     public static final List<DeferredItem<CardItem>> RARE_CARDS = List.of(
@@ -35,7 +38,12 @@ public class CardServices {
             TcgAnime.HAKUROU,
             TcgAnime.KARION,
             TcgAnime.FREY,
-            TcgAnime.DINO
+            TcgAnime.DINO,
+            TcgAnime.LUFFY,
+            TcgAnime.NAMI,
+            TcgAnime.ROBIN,
+            TcgAnime.CHOPPER,
+            TcgAnime.BAGGY
     );
 
     public static final List<DeferredItem<CardItem>> EPIC_CARDS = List.of(
@@ -43,7 +51,13 @@ public class CardServices {
             TcgAnime.DIABLO,
             TcgAnime.SHIZU,
             TcgAnime.LAMIRIS,
-            TcgAnime.LEON
+            TcgAnime.LEON,
+            TcgAnime.ZORO,
+            TcgAnime.SANJI,
+            TcgAnime.SHANKS,
+            TcgAnime.BARBE_BLANCHE,
+            TcgAnime.KAIDO,
+            TcgAnime.BIG_MOM
     );
 
     public static final List<DeferredItem<CardItem>> LEGENDARY_CARDS = List.of(
@@ -51,7 +65,9 @@ public class CardServices {
             TcgAnime.VELDRA,
             TcgAnime.MILIM,
             TcgAnime.ROUGE,
-            TcgAnime.VALENTINA
+            TcgAnime.VALENTINA,
+            TcgAnime.LUFFY_GEAR_5,
+            TcgAnime.BARBE_NOIRE
     );
 
     /* Param : card object
