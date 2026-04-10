@@ -17,16 +17,41 @@ public class CardServices {
 
     // we put every card we registered in this list so we can later pull a random one.
     public static final List<DeferredItem<CardItem>> COMMON_CARDS = List.of(
-            TcgAnime.LIMULE_SLIME
+            TcgAnime.LIMULE_SLIME,
+            TcgAnime.RENGA,
+            TcgAnime.GOBUTA,
+            TcgAnime.GABIRU,
+            TcgAnime.KUROBE,
+            TcgAnime.RIGURUD,
+            TcgAnime.GERUDO,
+            TcgAnime.CLAYMAN
     );
 
     public static final List<DeferredItem<CardItem>> RARE_CARDS = List.of(
+            TcgAnime.RIMURU,
+            TcgAnime.SHION,
+            TcgAnime.SHUNA,
+            TcgAnime.SOUEI,
+            TcgAnime.HAKUROU,
+            TcgAnime.KARION,
+            TcgAnime.FREY,
+            TcgAnime.DINO
     );
 
     public static final List<DeferredItem<CardItem>> EPIC_CARDS = List.of(
+            TcgAnime.BENIMARU,
+            TcgAnime.DIABLO,
+            TcgAnime.SHIZU,
+            TcgAnime.LAMIRIS,
+            TcgAnime.LEON
     );
 
     public static final List<DeferredItem<CardItem>> LEGENDARY_CARDS = List.of(
+            TcgAnime.RIMURU_ROI,
+            TcgAnime.VELDRA,
+            TcgAnime.MILIM,
+            TcgAnime.ROUGE,
+            TcgAnime.VALENTINA
     );
 
     /* Param : card object
