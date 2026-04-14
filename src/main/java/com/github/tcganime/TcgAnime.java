@@ -3,6 +3,7 @@ package com.github.tcganime;
 import com.github.tcganime.item.BinderItem;
 import com.github.tcganime.item.BoosterItem;
 import com.github.tcganime.item.CardItem;
+import com.github.tcganime.item.DisplayItem;
 import com.github.tcganime.services.CardServices;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
@@ -149,9 +150,15 @@ public class TcgAnime {
     public static final DeferredItem<BinderItem> CLASSIC_BINDER = ITEMS.register("perona_binder",
             () -> new BinderItem(new Item.Properties()));
 
-    // Booster
+    // Boosters
     public static final DeferredItem<BoosterItem> CLASSIC_BOOSTER = ITEMS.register("classic_booster",
-            () -> new BoosterItem(new Item.Properties()));
+            () -> new BoosterItem(new Item.Properties(), false));
+    public static final DeferredItem<BoosterItem> CLASSIC_GODPACK_BOOSTER = ITEMS.register("classic_godpack_booster",
+            () -> new BoosterItem(new Item.Properties(), true));
+
+    // Displays
+    public static final DeferredItem<DisplayItem> CLASSIC_DISPLAY = ITEMS.register("classic_display",
+            () -> new DisplayItem(new Item.Properties()));
 
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "tcganime" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);

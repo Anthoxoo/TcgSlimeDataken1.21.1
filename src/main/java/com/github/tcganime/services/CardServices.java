@@ -4,9 +4,11 @@ import com.github.tcganime.item.CardItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class CardServices {
+
     public enum RarityTier {
         /* This enum will allow to determine the rarity of the card we will be opening in order to give the right effect*/
         COMMON,
@@ -17,7 +19,7 @@ public class CardServices {
 
     // we put every card we registered in this list so we can later pull a random one.
     public static final List<DeferredItem<CardItem>> COMMON_CARDS = List.of(
-            TcgAnime.LIMULE_SLIME,
+/*            TcgAnime.LIMULE_SLIME,
             TcgAnime.RENGA,
             TcgAnime.GOBUTA,
             TcgAnime.GABIRU,
@@ -27,11 +29,11 @@ public class CardServices {
             TcgAnime.CLAYMAN,
             TcgAnime.FRANKY,
             TcgAnime.BROOK,
-            TcgAnime.JIMBE
+            TcgAnime.JIMBE*/
     );
 
     public static final List<DeferredItem<CardItem>> RARE_CARDS = List.of(
-            TcgAnime.RIMURU,
+/*            TcgAnime.RIMURU,
             TcgAnime.SHION,
             TcgAnime.SHUNA,
             TcgAnime.SOUEI,
@@ -43,11 +45,11 @@ public class CardServices {
             TcgAnime.NAMI,
             TcgAnime.ROBIN,
             TcgAnime.CHOPPER,
-            TcgAnime.BAGGY
+            TcgAnime.BAGGY*/
     );
 
     public static final List<DeferredItem<CardItem>> EPIC_CARDS = List.of(
-            TcgAnime.BENIMARU,
+/*            TcgAnime.BENIMARU,
             TcgAnime.DIABLO,
             TcgAnime.SHIZU,
             TcgAnime.LAMIRIS,
@@ -57,17 +59,17 @@ public class CardServices {
             TcgAnime.SHANKS,
             TcgAnime.BARBE_BLANCHE,
             TcgAnime.KAIDO,
-            TcgAnime.BIG_MOM
+            TcgAnime.BIG_MOM*/
     );
 
     public static final List<DeferredItem<CardItem>> LEGENDARY_CARDS = List.of(
-            TcgAnime.RIMURU_ROI,
+/*            TcgAnime.RIMURU_ROI,
             TcgAnime.VELDRA,
             TcgAnime.MILIM,
             TcgAnime.ROUGE,
             TcgAnime.VALENTINA,
             TcgAnime.LUFFY_GEAR_5,
-            TcgAnime.BARBE_NOIRE
+            TcgAnime.BARBE_NOIRE*/
     );
 
     /* Param : card object
@@ -93,8 +95,18 @@ public class CardServices {
     }
 
     public static RarityTier rollEpicOrLegendaryRarity() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        final double EPIC = 0.77;
+        // 77% EPIC 33% LEGENDARY
 
+        Random rand = new Random();
+        double randomNumber = rand.nextDouble();
+
+        if (randomNumber > EPIC) {
+            return RarityTier.LEGENDARY;
+        }
+        else {
+            return RarityTier.EPIC;
+        }
     }
 
     public static DeferredItem<CardItem> pullRandomCard() {
@@ -121,9 +133,24 @@ public class CardServices {
         }
     }
 
-
-
     public static DeferredItem<CardItem> pullEpicOrLegendaryCard() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        RarityTier tier = rollRandomRarity();
+
+        List<DeferredItem<CardItem>> poolToUse;
+        if (tier == RarityTier.LEGENDARY) {
+            poolToUse = LEGENDARY_CARDS;
+        } else {
+            poolToUse = EPIC_CARDS;
+        }
+
+        Random rand = new Random();
+        try {
+            int randomIndex = rand.nextInt(poolToUse.size());
+            return poolToUse.get(randomIndex);
+        }
+        catch (IllegalArgumentException e) {
+            TcgAnime.LOGGER.error("ERROR, the stack of card possible from the {} is empty", tier);
+            return COMMON_CARDS.getFirst(); // gives the first card of the common stack as preventive
+        }
     }
 }

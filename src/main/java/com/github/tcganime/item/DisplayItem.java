@@ -12,15 +12,9 @@ import net.neoforged.neoforge.items.ItemHandlerHelper;
 import java.util.Random;
 
 public class DisplayItem extends Item {
-    private final String name;
 
-    public DisplayItem(Properties properties, String name) {
+    public DisplayItem(Properties properties) {
         super(properties);
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
     }
 
     @Override

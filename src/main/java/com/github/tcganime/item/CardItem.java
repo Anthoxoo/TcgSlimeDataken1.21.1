@@ -21,14 +21,14 @@ public class CardItem extends Item {
 
 
     // Constructor
-    public CardItem(Properties properties, RarityTier rarity, Holder<MobEffect> effect, int effectAmplifier, List<Families> families, SubFamilies... subFamilies) {
+    public CardItem(Properties properties, RarityTier rarity, Holder<MobEffect> effect, int effectAmplifier, List<Families> families, List<SubFamilies> subFamilies) {
         super(properties);
         this.rarity = rarity;
         this.effect = effect;
         this.effectAmplifier = effectAmplifier;
         this.id = globalCounter++;
         this.families = families;
-        this.subFamilies = List.of(subFamilies);
+        this.subFamilies = subFamilies;
 
     }
 
