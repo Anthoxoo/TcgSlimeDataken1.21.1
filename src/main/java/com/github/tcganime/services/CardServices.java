@@ -92,6 +92,11 @@ public class CardServices {
         }
     }
 
+    public static RarityTier rollEpicOrLegendaryRarity() {
+        throw new UnsupportedOperationException("Not yet implemented");
+
+    }
+
     public static DeferredItem<CardItem> pullRandomCard() {
         RarityTier tier = rollRandomRarity();
 
@@ -114,5 +119,11 @@ public class CardServices {
             TcgAnime.LOGGER.error("ERROR, the stack of card possible from the {} is empty", tier);
             return COMMON_CARDS.getFirst(); // gives the first card of the common stack as preventive
         }
+    }
+
+
+
+    public static DeferredItem<CardItem> pullEpicOrLegendaryCard() {
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }
