@@ -1,10 +1,13 @@
 package com.github.tcganime.item;
 
 import com.github.tcganime.services.CardServices.RarityTier;
-import com.github.tcganime.services.Universe;
+import com.github.tcganime.services.Families;
+import com.github.tcganime.services.SubFamilies;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.Item;
+
+import java.util.List;
 
 public class CardItem extends Item {
     private static int globalCounter = 1;
@@ -13,16 +16,20 @@ public class CardItem extends Item {
     private final Holder<MobEffect> effect; // Same
     private final int effectAmplifier;
     private final int id;
-    private final Universe universe;
+    private final List<Families> families;
+    private final List<SubFamilies> subFamilies;
+
 
     // Constructor
-    public CardItem(Properties properties, RarityTier rarity, Holder<MobEffect> effect, int effectAmplifier, Universe universe) {
+    public CardItem(Properties properties, RarityTier rarity, Holder<MobEffect> effect, int effectAmplifier, List<Families> families, SubFamilies... subFamilies) {
         super(properties);
         this.rarity = rarity;
         this.effect = effect;
         this.effectAmplifier = effectAmplifier;
         this.id = globalCounter++;
-        this.universe = universe;
+        this.families = families;
+        this.subFamilies = List.of(subFamilies);
+
     }
 
     //Getters
@@ -38,7 +45,10 @@ public class CardItem extends Item {
     public int getId() {
         return this.id;
     }
-    public Universe getUniverse() {
-        return universe;
+    public List<Families> getFamilies() {
+        return this.families;
+    }
+    public List<SubFamilies> getSubFamilies() {
+        return this.subFamilies;
     }
 }

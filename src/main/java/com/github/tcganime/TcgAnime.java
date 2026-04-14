@@ -22,7 +22,6 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
-import com.github.tcganime.services.Universe;
 
 @Mod(TcgAnime.MODID)
 public class TcgAnime {
@@ -41,6 +40,7 @@ public class TcgAnime {
 
     // Cards
     // Slime dataken
+    /*
     public static final DeferredItem<CardItem> LIMULE_SLIME = ITEMS.register("limule_slime",
             () -> new CardItem(new Item.Properties(), CardServices.RarityTier.COMMON, MobEffects.MOVEMENT_SPEED,1, Universe.SLIME_DATAKEN));
     public static final DeferredItem<CardItem> RIMURU = ITEMS.register("rimuru",
@@ -127,7 +127,7 @@ public class TcgAnime {
             () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
     public static final DeferredItem<CardItem> BIG_MOM = ITEMS.register("big_mom",
             () -> new CardItem(new Item.Properties(), CardServices.RarityTier.EPIC, MobEffects.MOVEMENT_SPEED,1, Universe.ONE_PIECE));
-
+*/
 
 
 
